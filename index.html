@@ -11,48 +11,70 @@
 <style>
   .bg-archive-texture { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
   * { border-radius: 0px !important; }
+  a { text-decoration: none; color: inherit; }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+
 <nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-[#1a1a2e]/5 py-4">
   <div class="px-12 max-w-[1440px] mx-auto flex justify-between items-center">
     <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline uppercase">PROJECT MANA</div>
     <div class="flex items-center gap-6">
-      <a href="./src/governance/case_ukyo_01.html" class="bg-secondary text-white px-8 py-2 text-xs font-bold uppercase tracking-widest no-underline">不当な対応を報告</a>
+      <!-- ここでさっき苦労して作った「告発ページ」へ直通させます -->
+      <a href="./src/governance/case_ukyo_01.html" class="bg-secondary text-white px-8 py-3 text-xs font-bold uppercase tracking-widest hover:bg-opacity-90 transition-all">不当な対応を報告</a>
     </div>
   </div>
 </nav>
+
 <main class="relative min-h-screen pt-32 overflow-hidden bg-archive-texture">
   <div class="container mx-auto px-12 py-20 max-w-[1440px]">
     <div class="mb-10 inline-flex items-center gap-2 px-3 py-1 bg-white border-l-4 border-secondary shadow-sm">
       <span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Operational Readiness: 100%</span>
     </div>
-    <h1 class="text-7xl md:text-9xl font-black font-headline tracking-tighter text-primary leading-[1.0] mb-12">尊厳の<br/>奪還作戦</h1>
+    
+    <h1 class="text-7xl md:text-9xl font-black font-headline tracking-tighter text-primary leading-[1.0] mb-12">
+      尊厳の<br/>奪還作戦
+    </h1>
+    
     <p class="text-2xl md:text-3xl text-on-surface-variant leading-relaxed max-w-3xl border-l-4 border-secondary pl-10 mb-20 italic font-light">
       当事者の暮らし方は、当事者が選ぶ。
     </p>
+
+    <!-- 3つのデータベースへの動線 -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-y border-[#1a1a2e]/10">
+      
       <a href="https://fusakui-db.vercel.app/" target="_blank" class="p-12 bg-white hover:bg-secondary hover:text-white transition-all duration-500 group border-r border-[#1a1a2e]/5 no-underline">
         <div class="text-[10px] font-bold text-secondary group-hover:text-white uppercase tracking-widest mb-8 border border-secondary group-hover:border-white/40 px-2 py-1 w-fit">不作為</div>
         <h3 class="text-2xl font-headline font-bold mb-4">水際作戦DB</h3>
         <p class="text-sm opacity-70 leading-relaxed text-on-surface-variant group-hover:text-white">不当な申請拒絶の記録。あなたの権利を奪う壁を可視化する。</p>
+        <div class="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">Explore Archive →</div>
       </a>
-      <a href="https://misconduct-db.vercel.app/" target="_blank" class="p-12 bg-primary-container text-white hover:bg-primary transition-all duration-500 group border-r border-white/5 no-underline">
+
+      <a href="https://misconduct-db.vercel.app/" target="_blank" class="p-12 bg-primary-container text-white hover:bg-primary transition-all duration-500 group border-r border-white/5">
         <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-8 border border-white/20 px-2 py-1 w-fit">不祥事</div>
         <h3 class="text-2xl font-headline font-bold mb-4">不祥事ニュースDB</h3>
         <p class="text-sm opacity-70 leading-relaxed group-hover:text-white">公務員の不正・不適切行為をアーカイブ。権力の濫用を許さない。</p>
+        <div class="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">Public Accountability →</div>
       </a>
-      <a href="./src/governance/case_ukyo_01.html" class="p-12 bg-white hover:bg-[#2d7a4f] hover:text-white transition-all duration-500 group no-underline">
+
+      <a href="./src/governance/case_ukyo_01.html" class="p-12 bg-white hover:bg-[#2d7a4f] hover:text-white transition-all duration-500 group">
         <div class="text-[10px] font-bold text-[#2d7a4f] group-hover:text-white uppercase tracking-widest mb-8 border border-[#2d7a4f] group-hover:border-white/40 px-2 py-1 w-fit">空白</div>
         <h3 class="text-2xl font-headline font-bold mb-4 text-primary group-hover:text-white">支援の空白</h3>
         <p class="text-sm opacity-70 leading-relaxed text-on-surface-variant group-hover:text-white">制度の狭間で放置された困りごとの記録。明日の会議の武器となるエビデンス。</p>
+        <div class="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">Launch Terminal →</div>
       </a>
+
     </div>
   </div>
 </main>
+
 <footer class="bg-primary text-white/30 py-20 px-12 text-center">
   <div class="font-headline italic text-xl text-white mb-6">PROJECT MANA</div>
-  <p class="text-[10px] tracking-widest uppercase">© 2026 PROJECT MANA ARCHIVE | PRECISE SOCIAL INFRASTRUCTURE</p>
+  <p class="text-[10px] tracking-widest uppercase leading-relaxed max-w-md mx-auto">
+    © 2026 PROJECT MANA ARCHIVE | PRECISE SOCIAL INFRASTRUCTURE<br/>
+    すべての記録は一人の主権者による意志である。
+  </p>
 </footer>
+
 </body>
 </html>
