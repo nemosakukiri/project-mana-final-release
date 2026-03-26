@@ -6,7 +6,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
-  body { background-color: #fdf9f4; color: #1c1c19; font-family: 'Public Sans', 'Noto Sans JP', sans-serif; }
+  body { background-color: #fdf9f4; color: #1c1c19; font-family: 'Public Sans', sans-serif; line-height: 1.8; }
   .serif { font-family: 'Noto Serif JP', serif; }
   .bg-archive-texture { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
   * { border-radius: 0px !important; }
@@ -16,81 +16,101 @@
 
 <nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/90 backdrop-blur-xl border-b border-black/5 py-4">
   <div class="px-8 max-w-7xl mx-auto flex justify-between items-center">
-    <div class="text-xl font-black serif uppercase tracking-tighter">PROJECT MANA</div>
-    <div class="bg-[#b02d21] text-white px-6 py-2 text-xs font-bold uppercase tracking-widest">URGENT LOG</div>
+    <div class="text-xl font-black serif uppercase tracking-tighter text-[#00000b]">PROJECT MANA</div>
+    <div class="flex items-center gap-4">
+      <span class="text-[10px] font-bold tracking-widest text-[#b02d21] border border-[#b02d21] px-2 py-1 uppercase">Sovereign Mode</span>
+    </div>
   </div>
 </nav>
 
-<main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+<main class="max-w-4xl mx-auto px-6 pt-32 pb-24 space-y-32">
   
-  <!-- HERO: MANIFESTO -->
-  <section class="mb-32">
+  <!-- 1. マニフェスト：主権の宣言 -->
+  <section id="manifesto">
     <div class="mb-10 inline-flex items-center gap-2 px-3 py-1 bg-white border-l-4 border-[#b02d21] shadow-sm">
-      <span class="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">Operational Directive 001</span>
+      <span class="text-[10px] font-bold tracking-[0.2em] text-gray-500 uppercase">Manifesto</span>
     </div>
     <h1 class="text-6xl md:text-8xl font-black serif tracking-tighter text-[#00000b] leading-[1.1] mb-12">尊厳の<br/>奪還作戦</h1>
-    <p class="text-2xl md:text-3xl text-gray-600 leading-relaxed border-l-4 border-[#b02d21] pl-10 mb-12 italic font-light">当事者の暮らし方は、当事者が選ぶ。</p>
+    <p class="text-2xl md:text-3xl text-[#00000b] leading-relaxed border-l-4 border-[#b02d21] pl-10 mb-12 italic font-light">
+      当事者の暮らし方は、当事者が選ぶ。
+    </p>
   </section>
 
-  <!-- CASE FILE: UKYO-KU (ここが明日のメイン武器) -->
-  <section id="case-file" class="bg-white p-8 md:p-16 shadow-2xl border border-gray-100 mb-20">
-    <header class="mb-16 border-b border-gray-100 pb-8">
-      <p class="text-xs font-bold text-[#b02d21] tracking-[0.4em] uppercase mb-4">Urgent Indictment Log #001</p>
-      <h2 class="text-3xl md:text-5xl font-black serif leading-tight text-[#00000b]">京都市右京区・責任者による<br/>「法治主義の放棄」と生存権侵害の記録</h2>
+  <!-- 2. 特集：経済的虐待（お財布のたとえ話）ここが当事者の洗脳を解く場所 -->
+  <section id="economic-abuse" class="bg-[#1a1a2e] text-white p-8 md:p-16 space-y-12">
+    <h2 class="text-3xl md:text-5xl font-black serif leading-tight">ねえ、それ、<br/><span class="text-[#ff4d3d]">ネコババ</span>されてない？</h2>
+    <p class="text-lg opacity-80 serif italic">「経済的虐待」の真実を教えます。</p>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white/5 p-8 border border-white/10">
+        <p class="text-xs font-bold text-[#ff4d3d] mb-4 tracking-widest uppercase">フツウのお金（年金・給料）</p>
+        <p class="text-lg font-bold mb-4">1万円もらって5千円使った。</p>
+        <p class="text-2xl font-black text-white">➔ 残りの5千円は、<br/>あなたのお財布に残る。</p>
+        <p class="mt-4 text-xs opacity-50">（当たり前の常識です）</p>
+      </div>
+      <div class="bg-white/10 p-8 border-l-4 border-[#ff4d3d]">
+        <p class="text-xs font-bold text-[#ff4d3d] mb-4 tracking-widest uppercase">いまの福祉（受給権）</p>
+        <p class="text-lg font-bold mb-4">1万円の権利があるのに、<br/>行政がサボって5千円分しか助けない。</p>
+        <p class="text-2xl font-black text-[#ff4d3d]">➔ 余った5千円は、<br/>なぜか役所がネコババする。</p>
+        <p class="mt-4 text-xs opacity-80">（これを行政による「経済的虐待」と呼びます）</p>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/10">
+      <p class="text-xl leading-relaxed serif text-justify">
+        生活保護でも使い道は自由なはず。なのに、サービスになった途端に「サボればサボるほど役所がトクをする」のはおかしい。
+        <br/><br/>
+        <span class="text-2xl font-bold">余った分は、あなたのもの。</span><br/>
+        テクノロジーで効率化した「余白」は、あなたの自由のためにあるべきです。
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. ケースファイル：右京区の不作為（実戦の弾丸） -->
+  <section id="case-file" class="bg-white p-8 md:p-16 shadow-2xl border border-gray-100">
+    <header class="mb-16 border-b border-gray-100 pb-8 text-justify">
+      <p class="text-xs font-bold text-[#b02d21] tracking-[0.4em] uppercase mb-4">Case Log #001</p>
+      <h2 class="text-3xl md:text-5xl font-black serif leading-tight text-[#00000b]">京都市右京区・責任者による<br/>「法治主義の放棄」と生存権侵害</h2>
       <div class="mt-8 flex gap-4">
-        <span class="bg-[#b02d21] text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">法務局報告済み</span>
-        <span class="bg-[#00000b] text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">公式自白記録あり</span>
+        <span class="bg-[#b02d21] text-white px-3 py-1 text-[10px] font-bold uppercase">法務局報告済み</span>
+        <span class="bg-[#00000b] text-white px-3 py-1 text-[10px] font-bold uppercase">公式自白記録あり</span>
       </div>
     </header>
 
     <div class="space-y-16">
       <div class="border-l-4 border-[#00000b] pl-8">
-        <p class="text-xs text-[#b02d21] font-bold mb-4 uppercase tracking-widest">記録 01：責任者による驚愕の自白</p>
-        <p class="text-2xl md:text-3xl font-black serif leading-relaxed mb-6">「法律で仕事をしていない」</p>
-        <p class="text-gray-500 text-sm leading-relaxed text-justify">
-          法的評価：憲法99条および地方公務員法32条に違反。公務員自らによる、法に基づかない恣意的な運用の自白。
-        </p>
+        <p class="text-2xl md:text-3xl font-black serif leading-relaxed">「法律で仕事をしていない」</p>
+        <p class="text-gray-500 text-sm mt-4 italic">（2026.02.09 係長による自白）</p>
       </div>
-
       <div class="border-l-4 border-[#00000b] pl-8">
-        <p class="text-xs text-[#b02d21] font-bold mb-4 uppercase tracking-widest">記録 02：生存権の軽視と恫喝</p>
-        <p class="text-2xl md:text-3xl font-black serif leading-relaxed mb-6">「はいはい、どこにでも行ってください」</p>
-        <p class="text-gray-500 text-sm leading-relaxed text-justify">
-          法的評価：説明責任の放棄。法務局等への通報を不当に軽視し、市民の正当な権利行使を公然と嘲笑した事実の記録。
-        </p>
+        <p class="text-2xl md:text-3xl font-black serif leading-relaxed">「はいはい、どこにでも行ってください」</p>
+        <p class="text-gray-500 text-sm mt-4 italic">（説明責任の放棄と市民への恫喝）</p>
       </div>
 
       <div class="bg-[#f5e6e5] p-10 border-l-8 border-[#b02d21]">
-        <h3 class="text-sm font-bold text-[#b02d21] tracking-widest uppercase mb-6 serif">現在進行中の実害</h3>
+        <h3 class="text-sm font-bold text-[#b02d21] tracking-widest uppercase mb-6 serif">不作為による実害</h3>
         <ul class="space-y-4 text-base font-medium">
-          <li class="flex gap-4"><span>●</span> <span>ガス供給停止による生存権の侵害（入浴・炊事不能）を放置</span></li>
-          <li class="flex gap-4"><span>●</span> <span>行政不作為に起因する経済的・精神的追い込み（iPhone一括請求問題等）</span></li>
-          <li class="flex gap-4"><span>●</span> <span>担当職員による虚偽報告の組織的な追認と隠蔽</span></li>
+          <li>● インフラ停止放置による生存権侵害</li>
+          <li>● 経済的・精神的追い込み（iPhone一括請求問題等）</li>
+          <li>● 担当職員による虚偽報告の組織的追認</li>
         </ul>
       </div>
     </div>
-
-    <div class="mt-20 text-center">
-      <p class="serif text-xl font-bold italic">「私」の尊厳は、行政の都合で切り捨てられるものではない。</p>
-    </div>
   </section>
 
-  <!-- DATABASE LINKS -->
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-1 border-t border-black/10 pt-20">
-    <a href="https://fusakui-db.vercel.app/" target="_blank" class="p-10 bg-white hover:bg-gray-50 transition-all border border-gray-100 no-underline text-inherit">
-      <h3 class="text-lg font-black serif mb-2">水際作戦DB →</h3>
-      <p class="text-xs opacity-60">不当な申請拒絶の全記録。</p>
-    </a>
-    <a href="https://misconduct-db.vercel.app/" target="_blank" class="p-10 bg-white hover:bg-gray-50 transition-all border border-gray-100 no-underline text-inherit">
-      <h3 class="text-lg font-black serif mb-2">不祥事ニュースDB →</h3>
-      <p class="text-xs opacity-60">公権力の濫用をアーカイブ。</p>
-    </a>
+  <!-- 4. フッター的リンク -->
+  <section class="py-20 border-t border-black/10 text-center space-y-8">
+    <p class="serif text-2xl font-bold italic">「助けてもらう人」ではなく、<br/>一人の主権者として選ぶために。</p>
+    <div class="flex justify-center gap-12">
+      <a href="https://fusakui-db.vercel.app/" target="_blank" class="text-xs font-bold border-b border-black pb-1 uppercase tracking-widest">FUSAKUI DB</a>
+      <a href="https://misconduct-db.vercel.app/" target="_blank" class="text-xs font-bold border-b border-black pb-1 uppercase tracking-widest">MISCONDUCT DB</a>
+    </div>
   </section>
 
 </main>
 
 <footer class="bg-[#00000b] text-white/30 py-20 px-8 text-center text-[10px] tracking-[0.3em] uppercase font-bold">
-  © 2026 PROJECT MANA ARCHIVE | CRAFTED FOR HUMAN DIGNITY
+  © 2026 PROJECT MANA ARCHIVE | 本名を冠した尊厳の記録
 </footer>
 
 </body>
