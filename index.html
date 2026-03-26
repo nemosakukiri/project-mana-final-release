@@ -3,55 +3,45 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>PROJECT MANA | 尊厳の奪還作戦</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
-<script>
-  tailwind.config = { theme: { extend: { colors: { "surface-bright": "#fdf9f4", "primary-container": "#1a1a2e", "secondary": "#b02d21", "tertiary": "#2d7a4f", "primary": "#00000b", "surface": "#fdf9f4", "on-surface": "#1c1c19", }, fontFamily: { "headline": ["Noto Serif JP", "serif"], "body": ["Public Sans", "Noto Sans JP", "sans-serif"] } } } }
-</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
   .bg-archive-texture { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
   * { border-radius: 0px !important; }
-  a { text-decoration: none; color: inherit; }
 </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
-<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-[#1a1a2e]/5 py-4">
+<body class="bg-[#fdf9f4] text-[#1c1c19] font-sans selection:bg-[#b02d21]/20 selection:text-[#b02d21]">
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-black/5 py-4">
   <div class="px-12 max-w-[1440px] mx-auto flex justify-between items-center">
-    <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline uppercase">PROJECT MANA</div>
-    <div class="flex items-center gap-6 text-xs font-bold uppercase tracking-widest">
-      <a href="case_ukyo_01.html" class="bg-secondary text-white px-8 py-3 hover:bg-opacity-90 transition-all">不当な対応を報告</a>
+    <div class="text-xl font-bold tracking-tighter text-[#00000b] font-['Noto_Serif_JP'] uppercase">PROJECT MANA</div>
+    <div class="flex items-center gap-6">
+      <a href="case_ukyo_01.html" class="bg-[#b02d21] text-white px-8 py-3 text-xs font-bold uppercase tracking-widest no-underline hover:bg-opacity-90 transition-all">不当な対応を報告</a>
     </div>
   </div>
 </nav>
-
 <main class="relative min-h-screen pt-32 overflow-hidden bg-archive-texture">
   <div class="container mx-auto px-12 py-20 max-w-[1440px]">
-    <div class="mb-10 inline-flex items-center gap-2 px-3 py-1 bg-white border-l-4 border-secondary shadow-sm">
-      <span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Archive Protocol 001</span>
-    </div>
-    <h1 class="text-7xl md:text-9xl font-black font-headline tracking-tighter text-primary leading-[1.0] mb-12">尊厳の<br/>奪還作戦</h1>
-    <p class="text-2xl md:text-3xl text-on-surface-variant leading-relaxed max-w-3xl border-l-4 border-secondary pl-10 mb-20 italic font-light">当事者の暮らし方は、当事者が選ぶ。</p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-y border-[#1a1a2e]/10">
-      <a href="case_ukyo_01.html" class="p-12 bg-white hover:bg-secondary hover:text-white transition-all duration-500 group border-r border-[#1a1a2e]/5">
-        <div class="text-[10px] font-bold text-secondary group-hover:text-white uppercase tracking-widest mb-8 border border-secondary group-hover:border-white/40 px-2 py-1 w-fit">重要事案</div>
-        <h3 class="text-2xl font-headline font-bold mb-4">右京区の不作為</h3>
-        <p class="text-sm opacity-70 leading-relaxed text-on-surface-variant group-hover:text-white text-justify">京都市右京区役所における法治主義の放棄と生存権侵害の記録。2026年2月発生。</p>
+    <h1 class="text-7xl md:text-9xl font-black font-['Noto_Serif_JP'] tracking-tighter text-[#00000b] leading-[1.0] mb-12">尊厳の<br/>奪還作戦</h1>
+    <p class="text-2xl md:text-3xl text-gray-600 leading-relaxed max-w-3xl border-l-4 border-[#b02d21] pl-10 mb-20 italic font-light">当事者の暮らし方は、当事者が選ぶ。</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-y border-black/10">
+      <a href="case_ukyo_01.html" class="p-12 bg-white hover:bg-[#b02d21] hover:text-white transition-all duration-500 group border-r border-black/5 no-underline text-inherit">
+        <div class="text-[10px] font-bold text-[#b02d21] group-hover:text-white uppercase tracking-widest mb-8 border border-[#b02d21] group-hover:border-white/40 px-2 py-1 w-fit">重要事案</div>
+        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4">右京区の不作為</h3>
+        <p class="text-sm opacity-70 leading-relaxed">行政による法治主義の放棄と生存権侵害の記録。2026年2月発生。</p>
         <div class="mt-8 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">Access Archive →</div>
       </a>
-      <div class="p-12 bg-primary-container text-white opacity-30">
-        <div class="text-[10px] font-bold uppercase tracking-widest mb-8 border border-white/20 px-2 py-1 w-fit">不祥事</div>
-        <h3 class="text-2xl font-headline font-bold mb-4">公務員不祥事DB</h3>
-        <p class="text-sm opacity-70 leading-relaxed">統合中...</p>
+      <div class="p-12 bg-[#1a1a2e] text-white opacity-40">
+        <div class="text-[10px] font-bold uppercase tracking-widest mb-8 border border-white/20 px-2 py-1 w-fit">DB</div>
+        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4">不祥事ニュースDB</h3>
+        <p class="text-sm opacity-70 leading-relaxed text-justify">行政の職務放棄をアーカイブ化。</p>
       </div>
-      <div class="p-12 bg-white opacity-30">
-        <div class="text-[10px] font-bold uppercase tracking-widest mb-8 border border-gray-200 px-2 py-1 w-fit">解析</div>
-        <h3 class="text-2xl font-headline font-bold mb-4 text-primary">経済的虐待の解析</h3>
-        <p class="text-sm opacity-70 leading-relaxed text-on-surface-variant">統合中...</p>
+      <div class="p-12 bg-white opacity-40">
+        <div class="text-[10px] font-bold uppercase tracking-widest mb-8 border border-gray-200 px-2 py-1 w-fit">分析</div>
+        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4 text-[#00000b]">経済的虐待の解析</h3>
+        <p class="text-sm opacity-70 leading-relaxed">不作為による経済的損失の可視化。</p>
       </div>
     </div>
   </div>
 </main>
-<footer class="bg-primary text-white/20 py-12 text-center text-[10px] tracking-widest uppercase">© 2026 PROJECT MANA | ALL RIGHTS RESERVED.</footer>
 </body>
 </html>
