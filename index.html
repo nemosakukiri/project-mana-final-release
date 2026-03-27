@@ -2,94 +2,121 @@
 <html class="dark" lang="ja">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PROJECT MANA | 尊厳の奪還作戦：実況見分ログ</title>
+<title>PROJECT MANA | 尊厳の奪還作戦：統合ポータル</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
 <style>
-  body { background-color: #00142b; color: #d4e3ff; font-family: 'Inter', sans-serif; }
+  body { background-color: #00142b; color: #d4e3ff; font-family: 'Inter', sans-serif; line-height: 1.7; }
   .serif { font-family: 'Noto Serif JP', serif; }
-  .bg-strike { background-color: #470001; } /* 爆弾発言用の深紅 */
+  .bg-strike { background-color: #470001; }
+  .glass { background: rgba(0, 20, 43, 0.8); backdrop-filter: blur(20px); }
   * { border-radius: 0px !important; }
+  a { text-decoration: none; color: inherit; transition: all 0.3s; }
 </style>
 </head>
 <body class="selection:bg-[#afc8f0] selection:text-[#163152]">
 
-<nav class="fixed top-0 w-full z-50 bg-[#00142b]/80 backdrop-blur-xl border-b border-white/5 py-4">
-  <div class="px-8 max-w-7xl mx-auto flex justify-between items-center">
+<!-- グローバル・ナビゲーション -->
+<nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+  <div class="px-8 max-w-[1440px] mx-auto flex justify-between items-center">
     <div class="text-xl font-black serif uppercase tracking-tighter text-[#afc8f0]">PROJECT MANA</div>
-    <div class="bg-[#fa3d33] text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest animate-pulse">LIVE EVIDENCE</div>
+    <div class="hidden md:flex items-center space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+      <a href="#urgent" class="hover:text-white">Live Evidence</a>
+      <a href="#repository" class="hover:text-white">Repository</a>
+      <a href="#logic" class="hover:text-white">Analysis</a>
+    </div>
+    <a href="./src/governance/case_ukyo_01.html" class="bg-[#fa3d33] text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:brightness-110">不当な対応を報告</a>
   </div>
 </nav>
 
-<main class="max-w-4xl mx-auto px-6 pt-32 pb-24 space-y-24">
+<main class="max-w-6xl mx-auto px-6 pt-32 pb-24 space-y-40">
 
-  <!-- 今日の決定的な瞬間：沈黙の記録 -->
-  <section id="silence-log" class="border-l-4 border-[#fa3d33] pl-8">
-    <div class="mb-4 flex items-center gap-2">
-      <span class="bg-[#fa3d33] text-white px-2 py-0.5 text-[10px] font-bold uppercase">Critical Event</span>
-      <span class="text-secondary text-xs font-mono opacity-50">ID: 180B-SILENCE-20260327</span>
-    </div>
-    <h2 class="text-4xl md:text-6xl font-black serif leading-tight mb-8 text-white">180億円の指摘後の、<br/><span class="text-[#fa3d33]">30秒間の沈黙。</span></h2>
-    
-    <div class="bg-white/5 p-10 space-y-8">
-      <p class="text-lg leading-relaxed text-justify opacity-90">
-        「削減を重ねて180億円貯めたのではないか」という問いに対し、右京区障害保健福祉課長は完全に沈黙。
-        この30秒間の「空白」は、不作為による不当利益の事実上の自白である。
+  <!-- 1. ヒーローセクション：マニフェスト -->
+  <section id="manifesto" class="py-20 border-l-4 border-[#afc8f0] pl-10">
+    <p class="text-[10px] font-bold tracking-[0.4em] text-[#afc8f0] uppercase mb-6">Manifesto: Sovereign Architect</p>
+    <h1 class="text-7xl md:text-9xl font-black serif tracking-tighter text-white leading-tight mb-12">尊厳の<br/>奪還作戦</h1>
+    <p class="text-3xl md:text-4xl text-white/80 leading-relaxed italic font-light max-w-4xl">
+      当事者の暮らし方は、当事者が選ぶ。
+    </p>
+  </section>
+
+  <!-- 2. 【緊急】最新事案：沈黙と自白の記録 -->
+  <section id="urgent" class="grid grid-cols-1 lg:grid-cols-12 gap-1 bg-white/5 border border-white/10 shadow-2xl">
+    <div class="lg:col-span-7 p-8 md:p-16 space-y-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#fa3d33] text-white text-[10px] font-bold uppercase animate-pulse">Critical Incident Log</div>
+      <h2 class="text-4xl md:text-5xl font-black serif text-white leading-tight">180億円の指摘後の、<br/>30秒間の沈黙。</h2>
+      <p class="text-lg opacity-80 text-justify">
+        「削減を重ねて180億円貯めたのではないか」という問いに対し、責任者は完全に沈黙。この空白は、不作為による不当利益の事実上の自白である。
       </p>
-      <!-- 波形シミュレーション -->
-      <div class="h-16 flex items-center gap-1">
-        <div class="w-1 bg-[#afc8f0] h-8"></div><div class="w-1 bg-[#afc8f0] h-12"></div>
-        <div class="w-1 bg-[#fa3d33] h-1"></div><div class="w-1 bg-[#fa3d33] h-1"></div>
-        <div class="w-1 bg-[#fa3d33] h-1"></div><div class="w-1 bg-[#fa3d33] h-1"></div>
-        <div class="w-1 bg-[#fa3d33] h-1"></div><div class="w-1 bg-[#fa3d33] h-1"></div>
-        <span class="text-[10px] font-mono ml-4 opacity-50 uppercase tracking-widest">30sec Total Silence Recorded</span>
+      <div class="h-12 flex items-center gap-1">
+        <div class="w-1 bg-[#afc8f0] h-6"></div><div class="w-1 bg-[#afc8f0] h-10"></div>
+        <div class="w-1 bg-[#fa3d33] h-1 flex-grow"></div>
+        <span class="text-[10px] font-mono ml-4 opacity-50 uppercase tracking-widest">30sec Silence Captured</span>
       </div>
+    </div>
+    <div class="lg:col-span-5 bg-strike p-8 md:p-16 flex flex-col justify-center">
+      <p class="text-[10px] font-bold text-[#ffb4aa] uppercase tracking-widest mb-6">Confession: 2026.03.27</p>
+      <blockquote class="text-2xl font-bold serif text-white leading-relaxed mb-8">
+        「京都市では特別扶助は一切行っていません。」
+      </blockquote>
+      <p class="text-sm opacity-70 border-l border-white/30 pl-4">障害支援の責任者による管轄外法（生活保護法）の否定発言。</p>
+      <a href="./src/governance/case_ukyo_01.html" class="mt-12 text-xs font-bold uppercase tracking-widest border-b border-white pb-1 w-fit hover:text-[#afc8f0] hover:border-[#afc8f0]">View Full Case File →</a>
     </div>
   </section>
 
-  <!-- 今日の爆弾発言：特別扶助の否定 -->
-  <section class="bg-strike p-8 md:p-16 space-y-12 shadow-2xl">
-    <h3 class="text-2xl font-bold serif border-b border-white/20 pb-4">法的義務の公式拒絶（録音あり）</h3>
-    <div class="space-y-10">
-      <div>
-        <p class="text-[10px] font-bold uppercase tracking-widest text-[#ffb4aa] mb-4">右京区障害保健福祉課長による発言</p>
-        <p class="text-2xl md:text-4xl font-black serif leading-relaxed">「京都市では特別扶助は一切行っていません。」</p>
+  <!-- 3. 経済的虐待の理論：お財布のたとえ話 -->
+  <section id="logic" class="space-y-12 py-20 border-y border-white/5">
+    <h2 class="text-3xl font-black serif text-center uppercase tracking-widest">不作為の経済的解体</h2>
+    <div class="grid md:grid-cols-2 gap-1 px-4">
+      <div class="bg-[#001c3a] p-10 space-y-6">
+        <h4 class="text-xs font-bold text-[#afc8f0] uppercase tracking-widest">01. 常識的なお金の流れ</h4>
+        <p class="text-xl font-bold">1万円もらって5千円使ったなら、残りの5千円はあなたの財布に残る。当然です。</p>
       </div>
-      <p class="text-sm leading-relaxed opacity-80 border-l-2 border-[#ffb4aa] pl-6 text-justify">
-        管轄外の生活保護法について虚偽の断定を行い、個別の事情に応じた支援（特別扶助）を検討する義務を公然と放棄。
-        これは「不作為マニュアル」の存在を裏付ける決定的な証拠である。
-      </p>
+      <div class="bg-[#0e2b4b] p-10 space-y-6 border-l-2 border-[#fa3d33]">
+        <h4 class="text-xs font-bold text-[#fa3d33] uppercase tracking-widest">02. 歪んだ福祉のお金</h4>
+        <p class="text-xl font-bold text-white">行政がサボって5千円分しか助けない場合、余った5千円は役所がネコババする。</p>
+      </div>
+    </div>
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-lg serif italic opacity-70">「サボればサボるほど役所が儲かる。これを私たちは『経済的虐待』と定義する。」</p>
     </div>
   </section>
 
-  <!-- 経済的虐待の論理（お財布のたとえ） -->
-  <section class="space-y-12">
-    <h3 class="text-3xl font-black serif">なぜ、これを「虐待」と呼ぶのか。</h3>
-    <div class="grid md:grid-cols-2 gap-px bg-white/10">
-      <div class="bg-[#001c3a] p-8">
-        <p class="text-[10px] font-bold opacity-50 uppercase mb-4">フツウ（年金・給料）</p>
-        <p class="text-xl">お金が余れば<br/>自分の財布に残る。</p>
-      </div>
-      <div class="bg-[#0e2b4b] p-8 border-l-2 border-[#fa3d33]">
-        <p class="text-[10px] font-bold text-[#fa3d33] uppercase mb-4">今の福祉（受給権）</p>
-        <p class="text-xl">行政がサボって余った分は、<br/><span class="text-[#fa3d33] font-bold">役所がネコババする。</span></p>
-      </div>
+  <!-- 4. 核心データベース：3つの武器 -->
+  <section id="repository" class="space-y-16">
+    <div class="flex justify-between items-end">
+      <h2 class="text-3xl font-black serif uppercase tracking-tighter">The Repository</h2>
+      <p class="text-[10px] font-bold text-white/40 uppercase tracking-widest">Evidence Core Databases</p>
     </div>
-    <p class="text-sm opacity-60 italic text-center">「生活保護でも使い道は自由。サボった役所が儲かるのは、経済的虐待である。」</p>
-  </section>
-
-  <!-- 結び：主権の宣言 -->
-  <section class="py-20 text-center border-t border-white/5">
-    <blockquote class="text-3xl md:text-5xl font-black serif italic text-white leading-tight mb-12">
-      「当事者の暮らし方は、<br/>当事者が選ぶ。」
-    </blockquote>
-    <p class="text-xs font-bold tracking-[0.5em] uppercase text-[#afc8f0]">PROJECT MANA OFFICIAL ARCHIVE</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+      <a href="https://fusakui-db.vercel.app/" target="_blank" class="p-12 bg-[#00142b] hover:bg-white hover:text-black transition-all duration-500 group">
+        <span class="text-[10px] font-bold text-[#fa3d33] uppercase mb-8 block">Inaction</span>
+        <h3 class="text-2xl font-black serif mb-4">水際作戦DB</h3>
+        <p class="text-sm opacity-60 group-hover:opacity-100">不当な申請拒絶の全記録。</p>
+      </a>
+      <a href="https://misconduct-db.vercel.app/" target="_blank" class="p-12 bg-[#00142b] hover:bg-white hover:text-black transition-all duration-500 group">
+        <span class="text-[10px] font-bold text-[#afc8f0] uppercase mb-8 block">Misconduct</span>
+        <h3 class="text-2xl font-black serif mb-4">不祥事ニュースDB</h3>
+        <p class="text-sm opacity-60 group-hover:opacity-100">権力の濫用を可視化する報道記録。</p>
+      </a>
+      <a href="./src/business/dashboard/index.html" class="p-12 bg-[#00142b] hover:bg-white hover:text-black transition-all duration-500 group">
+        <span class="text-[10px] font-bold text-[#ffdad5] uppercase mb-8 block">Analysis</span>
+        <h3 class="text-2xl font-black serif mb-4 text-[#afc8f0] group-hover:text-black">ROI解析ボード</h3>
+        <p class="text-sm opacity-60 group-hover:opacity-100">不作為がもたらす経済損失の数値化。</p>
+      </a>
+    </div>
   </section>
 
 </main>
 
-<footer class="bg-black py-10 px-8 text-center text-[10px] tracking-[0.3em] uppercase opacity-40">
-  © 2026 PROJECT MANA | 本名を冠した、真実のアーカイブ
+<footer class="bg-black py-24 px-8 text-center space-y-8">
+  <div class="text-3xl font-black serif italic text-white">PROJECT MANA</div>
+  <p class="text-[10px] tracking-[0.3em] uppercase opacity-30">© 2026 PROJECT MANA ARCHIVE | PRECISION SOCIAL INFRASTRUCTURE</p>
+  <div class="flex justify-center gap-12 text-[10px] font-bold uppercase tracking-widest opacity-40">
+    <a href="#" class="hover:text-white">Privacy Protocol</a>
+    <a href="#" class="hover:text-white">Accessibility</a>
+    <a href="#" class="hover:text-white">Contact Identity</a>
+  </div>
 </footer>
 
 </body>
