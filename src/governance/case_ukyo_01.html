@@ -1,54 +1,252 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>OFFICIAL RECORD | 行政不作為に関する申立</title>
+
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>調査報告：組織的な経済的虐待</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-<script>
-  tailwind.config = { theme: { extend: { colors: { "primary": "#1a1a2e", "secondary": "#b02d21", "surface": "#fdf9f4" }, fontFamily: { "headline": ["Noto Serif JP", "serif"], "body": ["Public Sans", "sans-serif"] } } } }
-</script>
-<style>body { background-color: #fdf9f4; color: #1c1c19; font-family: 'Public Sans', sans-serif; } * { border-radius: 0px !important; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#454747",
+              "on-tertiary-fixed": "#410001",
+              "on-surface": "#d4e3ff",
+              "surface-container-lowest": "#000e23",
+              "on-secondary-container": "#b4b5b5",
+              "on-background": "#d4e3ff",
+              "surface-container": "#012040",
+              "surface-variant": "#1b3656",
+              "surface-container-high": "#0e2b4b",
+              "on-tertiary": "#690003",
+              "on-secondary": "#2f3131",
+              "surface-container-highest": "#1b3656",
+              "primary-container": "#001f3f",
+              "primary": "#afc8f0",
+              "error": "#ffb4ab",
+              "on-tertiary-fixed-variant": "#930007",
+              "background": "#00142b",
+              "surface-dim": "#00142b",
+              "on-primary-fixed-variant": "#2f486a",
+              "on-error-container": "#ffdad6",
+              "on-surface-variant": "#c4c6cf",
+              "on-secondary-fixed": "#1a1c1c",
+              "on-error": "#690005",
+              "surface-container-low": "#001c3a",
+              "secondary": "#c6c6c7",
+              "tertiary-fixed": "#ffdad5",
+              "tertiary-fixed-dim": "#ffb4aa",
+              "secondary-fixed": "#e2e2e2",
+              "primary-fixed-dim": "#afc8f0",
+              "tertiary-container": "#470001",
+              "inverse-surface": "#d4e3ff",
+              "on-primary-fixed": "#001c3a",
+              "error-container": "#93000a",
+              "on-secondary-fixed-variant": "#454747",
+              "on-primary": "#163152",
+              "surface": "#00142b",
+              "secondary-fixed-dim": "#c6c6c7",
+              "tertiary": "#ffb4aa",
+              "outline-variant": "#43474e",
+              "inverse-on-surface": "#163152",
+              "outline": "#8e9198",
+              "on-tertiary-container": "#fa3d33",
+              "inverse-primary": "#476083",
+              "surface-tint": "#afc8f0",
+              "surface-bright": "#203a5b",
+              "on-primary-container": "#6f88ad",
+              "primary-fixed": "#d4e3ff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            background-image: linear-gradient(to bottom, rgba(175, 200, 240, 0.05), rgba(0, 31, 63, 0.1));
+            pointer-events: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
 </head>
-<body class="p-6 md:p-12">
-<header class="max-w-4xl mx-auto mb-16 border-l-8 border-secondary pl-8">
-  <p class="text-xs font-bold text-secondary tracking-[0.4em] uppercase mb-4">Urgent Indictment Log #001</p>
-  <h1 class="text-4xl md:text-5xl font-headline font-black leading-tight text-primary">特定行政機関・責任者による<br/>「法治主義の放棄」と生存権侵害の記録</h1>
-  <div class="mt-6 flex gap-4">
-    <span class="bg-secondary text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">法務局報告済み</span>
-    <span class="bg-primary text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">公式自白記録あり</span>
-  </div>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#203a5b]/60 backdrop-blur-xl border-l-4 border-[#afc8f0] shadow-[0_32px_32px_rgba(212,227,255,0.06)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#afc8f0]" data-icon="gavel">gavel</span>
+<h1 class="font-['Inter'] font-bold uppercase tracking-widest text-sm text-[#afc8f0]">事案番号: 294-EXA</h1>
+</div>
+<span class="material-symbols-outlined text-[#afc8f0] cursor-pointer" data-icon="emergency_home">emergency_home</span>
 </header>
-<main class="max-w-4xl mx-auto space-y-16">
-  <section class="border-l-2 border-primary pl-8">
-    <h2 class="text-xs font-bold text-secondary tracking-widest uppercase mb-8">【事実経過】責任者による自白記録</h2>
-    <div class="space-y-10">
-      <div class="bg-white p-8 shadow-sm">
-        <p class="text-xs text-secondary font-bold mb-2">記録 01</p>
-        <p class="text-xl font-headline font-bold">「法律で仕事をしていない」</p>
-        <p class="mt-4 text-sm text-primary/60 italic text-justify">法的評価：憲法99条および地方公務員法32条に違反。公務員自らによる、法に基づかない恣意的な運用の自白。</p>
-      </div>
-      <div class="bg-white p-8 shadow-sm">
-        <p class="text-xs text-secondary font-bold mb-2">記録 02</p>
-        <p class="text-xl font-headline font-bold">「（インフラ停止は）自業自得。聞こえが悪い。」</p>
-        <p class="mt-4 text-sm text-primary/60 italic text-justify">法的評価：憲法25条（生存権）の軽視。行政の不作為に起因する困窮を、当事者の自己責任として切り捨てる構造的虐待。</p>
-      </div>
-      <div class="bg-primary text-white p-8 shadow-lg">
-        <p class="text-xs text-white/60 font-bold mb-2">外部機関への通報に対する回答</p>
-        <p class="text-xl font-headline font-bold">「はいはい、どこにでも行ってください」</p>
-        <p class="mt-4 text-sm text-white/60 italic text-justify">法的評価：説明責任の放棄。法務局等への通報を不当に軽視し、市民の権利行使を嘲笑した事実の記録。</p>
-      </div>
-    </div>
-  </section>
-  <section class="bg-[#f5e6e5] p-10 border-l-8 border-secondary">
-    <h2 class="text-xs font-bold text-secondary tracking-widest uppercase mb-6">現在進行中の権利侵害と実害</h2>
-    <ul class="space-y-4 text-sm font-medium">
-      <li>● 生命維持に不可欠なインフラ供給の停止（生存権の侵害）</li>
-      <li>● 行政の管理ミスに起因する経済的・精神的追い込み</li>
-      <li>● 担当職員（I-CW等）による虚偽報告の組織的な追認と隠蔽</li>
-    </ul>
-  </section>
+<main class="pt-24 px-6 max-w-lg mx-auto space-y-8 relative">
+<div class="grain-overlay absolute inset-0 z-0"></div>
+<!-- Header Section -->
+<section class="relative z-10">
+<p class="text-primary font-bold text-[10px] tracking-[0.2em] mb-2">報告書 // 担当責任者 01</p>
+<h2 class="text-3xl font-black uppercase leading-tight tracking-tighter">組織的な経済的虐待：<br/>実態調査報告</h2>
+<div class="mt-4 flex items-center gap-4 text-secondary text-xs font-mono">
+<span>[記録日時: 2023-11-21:0900]</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-bold">極秘資料</span>
+</div>
+</section>
+<!-- The Abuse Logic Paradox -->
+<section class="relative z-10 space-y-4">
+<h3 class="font-bold uppercase tracking-widest text-xs text-primary border-l-2 border-primary pl-3">法と運用の矛盾</h3>
+<div class="grid grid-cols-2 gap-px bg-surface-variant">
+<div class="bg-surface-container-low p-4">
+<p class="text-[10px] text-secondary mb-2 uppercase tracking-widest font-bold">法律の決まり</p>
+<p class="font-bold text-sm leading-relaxed text-on-surface">憲法25条：生活保護法に基づく「特別扶助」の支給義務。</p>
+</div>
+<div class="bg-surface-container-high p-4 border-l-2 border-on-tertiary-container">
+<p class="text-[10px] text-on-tertiary-container mb-2 uppercase tracking-widest font-bold">現場での拒否</p>
+<p class="font-bold text-sm leading-relaxed text-on-tertiary-container">他部署の介入：障害保健福祉推進室長による支給差し止め。</p>
+</div>
+</div>
+<div class="flex justify-center -my-2 relative z-20">
+<div class="bg-on-tertiary-container text-background px-3 py-1 font-black text-[10px] tracking-tighter">制度運用の異常を確認</div>
+</div>
+</section>
+<!-- Verbatim Evidence -->
+<section class="relative z-10">
+<div class="bg-tertiary-container border-l-4 border-on-tertiary-container p-6">
+<p class="text-[10px] text-on-tertiary-container font-bold tracking-widest uppercase mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="priority_high">priority_high</span> 不当な独自ルールの適用
+                </p>
+<blockquote class="text-2xl font-bold text-on-tertiary-container leading-[1.5] italic">
+                    「京都市では特別扶助は一切行っていません」
+                </blockquote>
+<p class="mt-4 text-xs text-on-tertiary-container/80 font-mono">
+                    （発言者：京都市障害保健福祉推進室長。国が定めた法律を、一自治体の判断で組織的に否定している。）
+                </p>
+</div>
+</section>
+<!-- Impact Assessment -->
+<section class="relative z-10 space-y-4">
+<h3 class="font-bold uppercase tracking-widest text-xs text-primary border-l-2 border-primary pl-3">生存リスク指標</h3>
+<div class="bg-surface-container-low p-6 space-y-6">
+<div class="flex items-end justify-between">
+<div>
+<p class="text-secondary text-[10px] uppercase tracking-[0.2em] font-bold">危険度</p>
+<p class="text-5xl font-black text-on-tertiary-container">94%</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="h-2 w-full bg-surface-container-highest flex">
+<div class="h-full bg-on-tertiary-container w-[94%]"></div>
+</div>
+<div class="grid grid-cols-3 text-[10px] font-bold text-secondary uppercase tracking-widest">
+<div>食事</div>
+<div class="text-center">住居</div>
+<div class="text-right">医療</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/15 space-y-3">
+<div class="flex justify-between items-center bg-surface-container-lowest p-3">
+<span class="text-xs font-bold text-on-surface">栄養不足</span>
+<span class="text-[10px] font-black text-on-tertiary-container">最優先警報</span>
+</div>
+<div class="flex justify-between items-center bg-surface-container-lowest p-3">
+<span class="text-xs font-bold text-on-surface">ホームレス化の懸念</span>
+<span class="text-[10px] font-black text-on-tertiary-container">高いリスク</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Psychological Insight -->
+<section class="relative z-10">
+<div class="bg-surface-container-highest p-6 space-y-4">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+<h3 class="font-bold uppercase tracking-widest text-xs text-primary">心理分析</h3>
+</div>
+<p class="text-on-surface leading-relaxed text-sm">
+                    対象者に<span class="text-primary font-bold">「越権行為への無自覚」</span>が見られます。<span class="text-primary font-bold">障害福祉の担当</span>でありながら、本来の権限を超えて<span class="text-primary font-bold">生活保護制度</span>（福祉事務所）の運用を支配し、個人の好みで法的に定められた支援を打ち切っています。
+                </p>
+<div class="p-4 bg-surface-container-low border-l-2 border-primary">
+<p class="text-xs font-bold italic text-secondary">
+                        「制度のねじれ：担当外の職員による独断的な拒絶が、弱者にとっては抗えない『ルール』となってしまっている。」
+                    </p>
+</div>
+<p class="text-[10px] text-secondary font-mono text-right">参照データ: 京都市記録_01</p>
+</div>
+</section>
+<!-- Waveform Silence Component -->
+<section class="relative z-10 space-y-3">
+<h3 class="font-bold uppercase tracking-widest text-xs text-primary border-l-2 border-primary pl-3">音声証拠の解析</h3>
+<div class="bg-surface-container-low h-16 flex items-center gap-1 px-4">
+<div class="w-1 bg-surface-variant h-4"></div>
+<div class="w-1 bg-primary h-8"></div>
+<div class="w-1 bg-primary h-12"></div>
+<div class="w-1 bg-primary h-10"></div>
+<div class="w-1 bg-surface-variant h-3"></div>
+<div class="w-1 bg-surface-variant h-4"></div>
+<div class="w-1 bg-primary h-6"></div>
+<div class="w-1 bg-primary h-14"></div>
+<div class="w-1 bg-on-tertiary-container h-16"></div>
+<div class="w-1 bg-on-tertiary-container h-14"></div>
+<div class="w-1 bg-surface-variant h-4"></div>
+<div class="w-1 bg-surface-variant h-3"></div>
+<div class="w-1 bg-primary h-8"></div>
+<div class="w-1 bg-primary h-10"></div>
+<div class="w-1 bg-primary h-12"></div>
+<div class="w-1 bg-surface-variant h-4"></div>
+<div class="w-1 bg-surface-variant h-2"></div>
+<div class="w-1 bg-surface-variant h-3"></div>
+<div class="w-1 bg-primary h-9"></div>
+<div class="w-1 bg-primary h-11"></div>
+<div class="w-1 bg-primary h-7"></div>
+<div class="w-1 bg-surface-variant h-4"></div>
+<div class="w-1 bg-surface-variant h-2"></div>
+<div class="w-1 bg-primary h-5"></div>
+<div class="w-1 bg-primary h-10"></div>
+<div class="w-1 bg-primary h-6"></div>
+<div class="w-1 bg-surface-variant h-3"></div>
+</div>
+<div class="flex justify-between text-[10px] font-mono text-secondary">
+<span>00:14:02</span>
+<span class="text-on-tertiary-container font-bold">拒絶反応を検出</span>
+<span>00:14:58</span>
+</div>
+</section>
+<!-- High Risk Action -->
+<section class="relative z-10 pt-4 pb-8">
+<button class="w-full bg-tertiary-container text-on-tertiary-container py-4 font-bold uppercase tracking-widest text-sm hover:brightness-125 active:opacity-80 transition-all duration-75 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="lock_open">lock_open</span>
+                法的措置の検討を開始
+            </button>
+</section>
 </main>
-<footer class="mt-20 py-10 text-center opacity-40 text-[10px] tracking-widest uppercase">© 2026 PROJECT MANA ARCHIVE | PRECISE SOCIAL INFRASTRUCTURE</footer>
-</body>
-</html>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-stretch h-20 bg-[#000e23] border-t border-surface-variant/30">
+<a class="flex flex-col items-center justify-center bg-[#0e2b4b] text-[#ffffff] h-full w-full" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-['Inter'] font-bold text-[10px] tracking-[0.2em]">分析</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c6c6c7] h-full w-full hover:bg-[#1b3656] transition-all duration-75" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="folder_open">folder_open</span>
+<span class="font-['Inter'] font-bold text-[10px] tracking-[0.2em]">証拠</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c6c6c7] h-full w-full hover:bg-[#1b3656] transition-all duration-75" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="description">description</span>
+<span class="font-['Inter'] font-bold text-[10px] tracking-[0.2em]">資料集</span>
+</a>
+</nav>
+</body></html>
