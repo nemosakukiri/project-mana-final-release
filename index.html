@@ -1,24 +1,82 @@
-<!-- (中略: ヘッダー部分は同じ) -->
-    <!-- 3つのデータベース統合グリッド -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-y border-black/10">
-      
-      <a href="https://fusakui-db.vercel.app/" target="_blank" class="p-12 bg-white hover:bg-black hover:text-white transition-all duration-500 group border-r border-black/5 no-underline text-inherit">
-        <div class="text-[10px] font-bold text-secondary group-hover:text-white uppercase tracking-widest mb-8 border border-secondary px-2 py-1 w-fit group-hover:border-white">不作為</div>
-        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4 text-black group-hover:text-white">水際作戦DB</h3>
-        <p class="text-sm opacity-70 leading-relaxed text-gray-600 group-hover:text-white">不当な申請拒絶の記録。あなたの権利を奪う壁を可視化する。</p>
-      </a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PROJECT MANA | 尊厳の奪還作戦</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Public+Sans:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = { theme: { extend: { colors: { "surface-bright": "#fdf9f4", "primary-container": "#1a1a2e", "secondary": "#b02d21", "tertiary": "#2d7a4f", "primary": "#00000b", "surface": "#fdf9f4", "on-surface": "#1c1c19", }, fontFamily: { "headline": ["Noto Serif JP", "serif"], "body": ["Public Sans", "Noto Sans JP", "sans-serif"] } } } }
+</script>
+<style>
+  .bg-archive-texture { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a1a2e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  * { border-radius: 0px !important; }
+  a { text-decoration: none; color: inherit; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
 
-      <a href="https://misconduct-db.vercel.app/" target="_blank" class="p-12 bg-black text-white hover:bg-secondary transition-all duration-500 group border-r border-white/5 no-underline">
-        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-8 border border-white/20 px-2 py-1 w-fit">不祥事</div>
-        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4 text-white">不祥事ニュースDB</h3>
-        <p class="text-sm opacity-70 leading-relaxed text-white">公権力の濫用をアーカイブ。Yahoo!ニュースの基準と連動。</p>
-      </a>
-
-      <a href="case_ukyo_01.html" class="p-12 bg-white hover:bg-[#2d7a4f] hover:text-white transition-all duration-500 group no-underline text-inherit">
-        <div class="text-[10px] font-bold text-[#2d7a4f] group-hover:text-white uppercase tracking-widest mb-8 border border-[#2d7a4f] px-2 py-1 w-fit group-hover:border-white">空白</div>
-        <h3 class="text-2xl font-['Noto_Serif_JP'] font-bold mb-4 text-black group-hover:text-white">支援の空白</h3>
-        <p class="text-sm opacity-70 leading-relaxed text-gray-600 group-hover:text-white">制度の狭間で放置された困りごとの記録。明日の会議の武器。</p>
-      </a>
-
+<!-- ナビゲーション -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9f4]/85 backdrop-blur-xl border-b border-black/5 py-4">
+  <div class="px-12 max-w-[1440px] mx-auto flex justify-between items-center">
+    <div class="text-xl font-bold tracking-tighter text-[#1a1a2e] font-headline uppercase">PROJECT MANA</div>
+    <div class="flex items-center gap-6">
+      <a href="case_ukyo_01.html" class="bg-secondary text-white px-8 py-2 text-xs font-bold uppercase tracking-widest no-underline hover:bg-opacity-90 transition-all">不当な対応を報告</a>
     </div>
-<!-- (以下略) -->
+  </div>
+</nav>
+
+<main class="relative min-h-screen pt-32 overflow-hidden bg-archive-texture">
+  <div class="container mx-auto px-12 py-20 max-w-[1440px]">
+    <div class="mb-10 inline-flex items-center gap-2 px-3 py-1 bg-white border-l-4 border-secondary shadow-sm">
+      <span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Archive Protocol 001</span>
+    </div>
+    <h1 class="text-7xl md:text-9xl font-black font-headline tracking-tighter text-primary leading-[1.0] mb-12">尊厳の<br/>奪還作戦</h1>
+    <p class="text-2xl md:text-3xl text-on-surface-variant leading-relaxed max-w-3xl border-l-4 border-secondary pl-10 mb-20 italic font-light">当事者の暮らし方は、当事者が選ぶ。</p>
+
+    <!-- 3つのデータベース統合 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1 border-y border-black/10">
+      <a href="https://fusakui-db.vercel.app/" target="_blank" class="p-12 bg-white hover:bg-black hover:text-white transition-all duration-500 group border-r border-black/5">
+        <div class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-8 border border-secondary px-2 py-1 w-fit group-hover:border-white">不作為</div>
+        <h3 class="text-2xl font-headline font-bold mb-4">水際作戦DB</h3>
+        <p class="text-sm opacity-70 leading-relaxed">行政による申請拒絶を記録。逃げ場のない事実の集積。</p>
+      </a>
+
+      <a href="https://follow.yahoo.co.jp/themes/0ba37f4246d72e7b1339/" target="_blank" class="p-12 bg-primary-container text-white hover:bg-primary transition-all duration-500 group border-r border-white/5">
+        <div class="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-8 border border-white/20 px-2 py-1 w-fit">全国ニュース連携</div>
+        <h3 class="text-2xl font-headline font-bold mb-4 text-white">不祥事ニュース</h3>
+        <p class="text-sm opacity-70 leading-relaxed text-white/80">Yahoo!ニュースが報じる全国の不当行為を、不祥事の「基準」として採用。</p>
+      </a>
+
+      <a href="case_ukyo_01.html" class="p-12 bg-white hover:bg-[#2d7a4f] hover:text-white transition-all duration-500 group">
+        <div class="text-[10px] font-bold text-[#2d7a4f] uppercase tracking-widest mb-8 border border-[#2d7a4f] px-2 py-1 w-fit group-hover:border-white">実戦エビデンス</div>
+        <h3 class="text-2xl font-headline font-bold mb-4">右京区の不作為</h3>
+        <p class="text-sm opacity-70 leading-relaxed text-justify">法治主義の放棄、3ヶ月の放置、恫喝の自白記録。明日の会議の武器。</p>
+      </a>
+    </div>
+
+    <!-- 経済的虐待のロジック -->
+    <div class="mt-32 bg-[#1a1a2e] text-white p-8 md:p-16 space-y-12">
+      <h2 class="text-4xl font-black font-headline text-[#ff4d3d]">その180億円は、誰のもの？</h2>
+      <div class="grid md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
+        <div>
+          <p class="text-xs font-bold uppercase mb-4 opacity-50">行政の貯金</p>
+          <p class="text-3xl font-black">180 億円</p>
+          <p class="text-sm mt-4 opacity-60">不作為によって積み上げられた、不当な黒字。</p>
+        </div>
+        <div class="border-l-4 border-[#ff4d3d] pl-8">
+          <p class="text-xs font-bold text-[#ff4d3d] uppercase mb-4">当事者の権利</p>
+          <p class="text-3xl font-black text-[#ff4d3d]">1 円</p>
+          <p class="text-sm mt-4 text-[#ff4d3d] font-bold">搾取され、生活を破壊された「私」の現実。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-primary text-white/30 py-20 px-12 text-center text-[10px] tracking-widest uppercase font-bold">
+  © 2026 PROJECT MANA ARCHIVE | 所持金1円からの奪還作戦
+</footer>
+
+</body>
+</html>
